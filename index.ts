@@ -29,21 +29,43 @@ let client:objet = {
     age: 24,
     message: ""
 }
+class  Singer {
+ id: number;
+ name: string;
+ alive?: boolean
+ constructor(id: number, name:string,alive?: boolean){
+    this.id = id
+    this.name = name
+ }
+ 
+}
+
+const prince = new Singer(46,"prince")
 
 
 
+console.log(prince);
+
+function saymyname(name: string) {
+    console.log(`bonjour +  ${name}`);
+    
+}
 
 
 
+const age = (age: string | number, size?:number) => {
+        if (size) {
+        console.log(`la taille est de ${size} cm et il est agé de ${age}  ans `  );
+        
+    }    else {
+        console.log(` il est agé de ${age}  ans `  );
+        
+    }
+}
 
 
 
-
-
-
-
-
-
+age("14",45)
 
 
 

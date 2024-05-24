@@ -14,6 +14,7 @@ console.log(array);
 
 tableau.push(false)
 
+
 // tableau2.push(arr)
 
 
@@ -53,7 +54,7 @@ function saymyname(name: string) {
 
 
 
-const age = (age: string | number, size?:number) => {
+const age = (age: string | number, size?:number):void => {
         if (size) {
         console.log(`la taille est de ${size} cm et il est agé de ${age}  ans `  );
         
@@ -62,11 +63,25 @@ const age = (age: string | number, size?:number) => {
         
     }
 }
-
-
-
 age("14",45)
+// enum & tupple 
 
+enum Role {admin,heros,prime}
+interface User {
+    names: string;
+    attribute: [number| boolean, string]
+    role: Role
+}
+const user1:User= {
+    names: "julien",
+    attribute: [14,"ss"],
+    role: Role.admin
+}
+if (user1.role == Role.admin) {
+    console.log("Permission Admin");
+    
+}
+console.log(user1.role);
 
 
 

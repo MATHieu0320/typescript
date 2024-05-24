@@ -35,3 +35,19 @@ const age = (age, size) => {
     }
 };
 age("14", 45);
+// enum & tupple 
+var Role;
+(function (Role) {
+    Role[Role["admin"] = 0] = "admin";
+    Role[Role["heros"] = 1] = "heros";
+    Role[Role["prime"] = 2] = "prime";
+})(Role || (Role = {}));
+const user1 = {
+    names: "julien",
+    attribute: [14, "ss"],
+    role: Role.admin
+};
+if (user1.role == Role.admin) {
+    console.log("Permission Admin");
+}
+console.log(user1.role);
